@@ -414,7 +414,7 @@ Test Date, Cores, Description, What did I test?, Results, Reflections
 
 30/03/2019 - ToLower, OrderWord - Since I did Task 1, I was able to refactor my code using some functions that were created in the previews task and reuse them to reduce duplicate code in my program. I have used these new functions to reduce the lines in the functions "FindAnagrams" and "LargestWordAvailable" - PASSED
 
-31/03/2019 - LargestWordAvailable - I have improved the function with a random option for the result of the string - I have sent an email to Mike on March 30th asking about if every time the function runs, the function should return a different string when it is possible. As I do not have any answer up to the end of the time, I have decided to implement this option to the function - I have done further tests and the function switch between 2 results as I expect - PASSED
+31/03/2019 - LargestWordAvailable - I have improved the function with a random option for the result of the string - I have done further tests and the function switch between 2 results as I expect - PASSED
 
 31/03/2019 - All Functions - I have tested and reviewed all the functions of the program and read all the comments made to release the Assignment to the teacher - PASSED
 
