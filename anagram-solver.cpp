@@ -28,8 +28,7 @@
 //create a fixed identifier (a bit like an unchangeable global variable) with a string value; the compiler will automatically use the string for each instance of the identifier
 //#define cDATAFILE "Words_100_Testing.csv"
 //#define cDATAFILE "Words_1K_Testing.csv"
-#
-define cDATAFILE "Words_75K_PreSubmissionTesting.csv"
+#define cDATAFILE "Words_75K_PreSubmissionTesting.csv"
 
 using namespace std; //tell the compiler that by default to use the “std” – this means that we don’t need to keep saying “std::cout” we can just use: “cout”
 
