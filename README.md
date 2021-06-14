@@ -64,3 +64,7 @@ FindAll3LetterAnagrams() – this function must be designed so that is scans you
 FindAll5LetterAnagrams() – this function must be designed so that is scans your specified data file and identifies all entries that are examples of five letter anagrams; each sequence of anagrams must be displayed together and a clear separation must exist if a new sequence of three letter anagrams are found. 
 
 QuitNow() – this function does not expect or return any data and must be declared as void.  Its purpose is to allow the user to exit the program. Once selected it must allow the user to change their mind using an “are you sure” option.  It the user is sure then the program will quit; however, if the user enters anything other than “Y”, “y” or “Yes” the user will we returned back to the menu function and allowed to select another option.
+
+## Contact me!
+
+For more information about this project, please email me at mgrosmaninho@hotmail.com
