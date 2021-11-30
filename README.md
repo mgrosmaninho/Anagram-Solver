@@ -3,7 +3,7 @@ Coursework from University of Hertfordshire
 
 
 ## Task
-Create a C++ (version 11) program that performs the functions necessary to analyse and create anagrams; we shall define and anagram as a word or phrase formed by rearranging the letters of another word (for example: spar can be formed from rasp, alert can be formed from lager, etc.).
+Create a C++ (version 11) program that performs the functions necessary to analyse and create anagrams; we shall define an anagram as a word or phrase formed by rearranging the letters of another word (for example: spar can be formed from rasp, alert can be formed from lager, etc.).
 
 Once run, your program should present the user with a menu that displays the title “C++ Anagram Solver Challenge” and presents the user with a number of menu choices.  Once the menu has been shown, the user must be asked to make a selection by stating “Please enter a valid option (1 – 5 or 0 to quit): ”.  
 
