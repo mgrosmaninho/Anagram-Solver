@@ -1,6 +1,12 @@
 # Anagram-Solver
-Coursework from University of Hertfordshire
+Coursework from the University of Hertfordshire
 
+## Table of contents
+* [Task](#task)
+* [Program Requirements](#program-requirements)
+* [Function Requirements](#function-requirements)
+* [Function Operations](#function-operations)
+* [Contact me!](#contact-me)
 
 ## Task
 Create a C++ (version 11) program that performs the functions necessary to analyse and create anagrams; we shall define an anagram as a word or phrase formed by rearranging the letters of another word (for example: spar can be formed from rasp, alert can be formed from lager, etc.).
@@ -25,21 +31,21 @@ Time taken to complete the last function was: 0ms
 Please enter a valid option (1 – 5 or 0 to quit): 
 ```
 
-If the user enters any non-valid option, your program must issue the following error message: Unfortunately, ‘XX’ is not a valid option, please try again.
+If the user enters a non-valid option, your program must issue the following error message: Unfortunately, ‘XX’ is not a valid option. Please try again.
 
-Ensure your program replaces XX (contained inside the two single quotes) with the invalid option entered. For example, it the user enters the letter “q”, the error message would be:
+Ensure your program replaces XX (contained inside the two single quotes) with the invalid option entered. For example, if the user enters the letter “q”, the error message would be:
 Unfortunately, ‘q’ is not a valid option, please try again.
 
 
 ## Program Requirements
-Design your program so that each menu option calls a dedicated function; your function names must be: GetWord, FindAnagrams, LargestWordAvailable, FindAll3LetterAnagrams, FindAll5LetterAnagrams and QuitNow.  With the exception of the quit option, your program must repeatably (after each menu option has completed) return and present the user with the menu (including the title).  If the user enters a new word or phrase (e.g. used option 1 to change the default word (which must initially be: alert) then this new word is displayed (until changed again) as part of the menu option.  If the user selects the quit option (e.g. 0) the associated function must display the message:
+Design your program so that each menu option calls a dedicated function; your function names must be: GetWord, FindAnagrams, LargestWordAvailable, FindAll3LetterAnagrams, FindAll5LetterAnagrams and QuitNow.  With the exception of the quit option, your program must repeatably (after each menu option has been completed) return and present the user with the menu (including the title).  If the user enters a new word or phrase (e.g. used option 1 to change the default word (which must initially be: alert), then this new word is displayed (until changed again) as part of the menu option.  If the user selects the quit option (e.g. 0) the associated function must display the message:
 Are you sure (Y/N)?
 
-Your program will only terminate if the user enters either: “Y”, “Yes” or “y”; after which your function must use the C++ instruction: ”exit(EXIT_SUCCESS);” to terminate.
+Your program will only terminate if the user enters either: “Y”, “Yes”, or “y”; after which your function must use the C++ instruction: ”exit(EXIT_SUCCESS);” to terminate.
 
 If the user enters any other response the program should return back to the menu function and allow them to select any other valid option (as many times as they like).
 
-In addition, you will be expected to implement a fairly accurate timer that can be used to report the time taken to process the users request. For example once the user has selected option 2 (find an anagram) the function will initialise a timer that will count the time taken for the program to return with a result; take a look at the results summary used by Google after entering a search term – when searching the term “anagrams” it reported that it found about 72,500,000 results in 0.42 seconds. Design your program so the time taken to process each request is shown as part of the menu (specifically on the line “Time taken to complete the last function was…”). 
+In addition, you will be expected to implement a fairly accurate timer that can be used to report the time taken to process the user's request. For example, once the user has selected option 2 (find an anagram), the function will initialise a timer that will count the time taken for the program to return with a result; take a look at the results summary used by Google after entering a search term – when searching the term “anagrams”, it reported that it found about 72,500,000 results in 0.42 seconds. Design your program so the time taken to process each request is shown as part of the menu (specifically on the line “Time taken to complete the last function was…”). 
 
 
 ## Function Requirements
@@ -49,13 +55,13 @@ Each of the anagram functions (i.e. FindAnagrams(), LargestWordAvailable) must b
 However, both the functions: FindAll3LetterAnagrams() and FindAll5LetterAnagrams() must be designed not to accept or return any data:
 ```void FUNCTION_NAME(void)```
 
-Depending on how you decide to design and code your program you will be expected to use the test data provided (there are two test files for you to use: Words_100_Testing.csv and Words_1K_Testing.csv).  The Words100 file contains 100 random words while the Words_1K file contains 1000 random words. You are advised to start testing your code on the 100 version before using the 1000 word test file.  Your program will be assessed using a much bigger dataset (around 75,000 words so it is important to ensure your code is optimised first to work, then for speed).  Once you are sure your functions are working it is strongly suggested that you try using the pre-submission assessment csv file (this file contains approx. 75,000 English words) to more fully test and highlight any potential issues with your algorithm, code and/or its performance.
+Depending on how you decide to design and code your program, you will be expected to use the test data provided (there are two test files for you to use: Words_100_Testing.csv and Words_1K_Testing.csv).  The Words100 file contains 100 random words, while the Words_1K file contains 1000 random words. You are advised to start testing your code on the 100 version before using the 1000-word test file.  Your program will be assessed using a much bigger dataset (around 75,000 words, so it is important to ensure your code is optimised first to work and then for speed).  Once you are sure your functions are working it is strongly suggested that you try using the pre-submission assessment csv file (this file contains approx. 75,000 English words) to more fully test and highlight any potential issues with your algorithm, code and/or its performance.
 
 
 ## Function Operations
 GetWord() -  this function is defined so that it does not expect any arguments, however it does return a string datatype.  Its purpose is to allow the user to enter a new word which can then be use by the other functions.  The function must return the user’s specified word or phrase; this replacement word should then be shown to the user as part of the previously defined Menu operation (specifically as part of the output line “current word/phrase is…”); ensure the function is declared appropriately.
 
-FindAnagrams() – this function must be defined so that it expects only one string and does not return a result (the function’s input value must be named “originalString”; see the template signature discussed under the function requirements section for more detail).  A locally defined variable (called localString) should also be declared and initialised so that it is a copy of the original input value. Using the data from an appropriate test file (e.g. Words_100_Testing.csv or Words_1K_Testing.csv, etc) this function is required to scan all available words and identify and display each word that is an anagram of the string provided; the system must not include the original string as an anagram of itself.  If provided with the string “Lager” it should display all correct anagrams (e.g. regal, glare, etc); the system should (in addition to the words) also count the number of results found – in this case 2 anagrams of Lager.  You are expected to display the results in an efficient, logical, clear and organised way.  When matching anagrams you are requested to ignore case; Lager and lager are the same – this means that your system should not differentiate whether a word contains upper of lower case characters.
+FindAnagrams() – this function must be defined so that it expects only one string and does not return a result (the function’s input value must be named “originalString”; see the template signature discussed under the function requirements section for more detail).  A locally defined variable (called localString) should also be declared and initialised so that it is a copy of the original input value. Using the data from an appropriate test file (e.g. Words_100_Testing.csv or Words_1K_Testing.csv, etc), this function is required to scan all available words and identify and display each word that is an anagram of the string provided; the system must not include the original string as an anagram of itself.  If provided with the string “Lager” it should display all correct anagrams (e.g. regal, glare, etc); the system should (in addition to the words) also count the number of results found – in this case 2 anagrams of Lager.  You are expected to display the results in an efficient, logical, clear and organised way.  When matching anagrams you are requested to ignore case; Lager and lager are the same – this means that your system should not differentiate whether a word contains upper of lower case characters.
 
 LargestWordAvailable() – this function must be defined so that it expects only one string and does not return a result (the function’s input value must be named “originalString”; see the template signature discussed under the function requirements section for more detail).  A locally defined variable (called localString) should also be declared and initialised so that it is a copy of the original input value. Using the data from an appropriate test file (e.g. Words_100_Testing.csv or Words_1K_Testing.csv, etc) this function is required to scan all available words and identify and display only the largest word available that contains (in any order) as many of the letters provided as possible; in essence this function should be able to solve the random words used in the gameshow “countdown” or “8 out of 10 cats does countdown”.  An example might be the letters “eshpoiexd”, your function may find the valid word “episode” or “exposed” or “epoxies”; however, in addition to finding the largest word it should also provide an indication of how many other words could be found of the same length.
 
